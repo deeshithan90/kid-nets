@@ -1,0 +1,254 @@
+.username {
+   background-color: black;
+   border-radius: 25px;
+   border: white 2px solid;
+   padding: 10px;
+   color: palegoldenrod;
+   outline: none;
+   font-weight: bold;
+}
+
+.username::placeholder {
+   color: palegoldenrod;
+   font-weight: bold;
+}
+
+.number {
+   background-color: black;
+   border-radius: 25px;
+   border: white 2px solid;
+   padding: 10px;
+   color: palegoldenrod;
+   outline: none;
+   font-weight: bold;
+}
+
+.number::placeholder {
+   color: palegoldenrod;
+   font-weight: bold;
+}
+
+.password {
+   background-color: black;
+   border-radius: 25px;
+   border: white 2px solid;
+   padding: 10px;
+   color: palegoldenrod;
+   outline: none;
+   font-weight: bold;
+}
+
+.password::placeholder {
+   color: palegoldenrod;
+   font-weight: bold;
+}
+
+
+.Email{
+   background-color: black;
+   border-radius: 25px;
+   border: white 2px solid;
+   padding: 10px;
+   color: palegoldenrod;
+   outline: none;
+   font-weight: bold;
+}
+.Email::placeholder{
+   color: palegoldenrod;
+   font-weight: bold;
+}
+
+.g{
+   background-color: black;
+   border-radius: 25px;
+   border: white 2px solid;
+   padding: 10px;
+   color: palegoldenrod;
+   outline: none;
+   font-weight: bold;
+   display: inline-block;
+}
+
+.g::placeholder{
+   color: palegoldenrod;
+   font-weight: bold;
+}
+
+.gs{
+   background-color: black;
+   border-radius: 25px;
+   border: white 2px solid;
+   padding: 10px;
+   color: palegoldenrod;
+   outline: none;
+   font-weight: bold;
+   display: inline-block;
+   border: none;
+}
+
+.gs::placeholder{
+  color: palegoldenrod;
+  font-weight: bold;
+}
+
+.number1{
+   padding: 15px;
+   width: 100px;
+   background-color: black;
+   border: white 2px solid;
+   color: palegoldenrod;
+}
+.number1::placeholder{
+   color: palegoldenrod;
+}
+.number2{
+    padding: 15px;
+   width: 100px;
+   background-color: black;
+   border: white 2px solid;
+   color: palegoldenrod;
+}
+
+.number3{
+   margin-top: 20px;
+   padding: 15px;
+   width: 100px;
+   background-color: black;
+   border: white 2px solid;
+   color: palegoldenrod;
+   font-weight: bold;
+}
+
+.number3::placeholder{
+  color: palegoldenrod;
+  font-weight: bold;
+}
+
+.btn8{
+   padding: 12px;
+   background-color: palegoldenrod;
+   border: none;
+}
+
+.number2::placeholder{
+   color:palegoldenrod;
+}
+
+.gst{
+   background-color: black;
+   border: white 2px solid;
+   color: palegoldenrod;
+   outline: none;
+   font-weight: bold;
+   display: inline-block;
+   border: none;
+}
+
+.School-Name {
+   background-color: black;
+   border-radius: 25px;
+   border: white 2px solid;
+   padding: 10px;
+   color: palegoldenrod;
+   outline: none;
+   font-weight: bold;
+}
+
+.School-Name::placeholder {
+   color: palegoldenrod;
+   font-weight: bold;
+}
+
+.datetime {
+   background-color: black;
+   border-radius: 25px;
+   border: white 2px solid;
+   padding: 10px;
+   color: palegoldenrod;
+   outline: none;
+   width: 180px;
+   font-weight: bold;
+}
+
+.Adders {
+   background-color: black;
+   border-radius: 25px;
+   border: white 2px solid;
+   padding: 10px;
+   color: palegoldenrod;
+   outline: none;
+   width: 180px;
+   font-weight: bold;
+}
+
+.Adders::placeholder {
+   color: palegoldenrod;
+   font-weight: bold;
+}
+
+.btn {
+   background-color: gold;
+   color: white;
+   padding: 10px;
+   width: 200px;
+   border-radius: 25px;
+   border: none;
+}
+
+.ut {
+   position: absolute;
+   top: 10px;
+   left: 18%;
+   border-radius: 95px;
+}
+
+.uts {
+   border-radius: 100px;
+   margin-left: -12px;
+}
+
+.utss {
+   border-radius: 100px;
+   margin-left: -12px;
+   animation-name: spin;
+   animation-duration:2s;
+}
+
+@keyframes spin {
+   0%{
+      transform: rotate(0deg);
+   }
+   50%{
+      transform: rotate(250deg);
+   }
+   100%{
+      transform: rotate(360deg);
+   }
+}
+
+.btns{
+   background-color: palegoldenrod;
+   padding: 20px;
+   font-size: 15px;
+   border-radius: 2px;
+   border: none;
+   border-radius: 25px;
+   width: 160px;
+}
+
+.i8{
+   position: absolute;
+   top: 630px;
+   left: 28%;
+}
+
+.Side-Navbar{
+   background-color: black;
+   position: fixed;
+   top: 0;
+   left: -60%;
+   padding: 40px;
+   height: 100%;
+   transition: 1s;
+   color: palegoldenrod;
+}
