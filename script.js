@@ -1,61 +1,57 @@
-var username = document.querySelector(".username")
-var number = document.querySelector(".number")
-var password = document.querySelector(".password")
-var SchoolName = document.querySelector(".School-Name")
-var Adders = document.querySelector(".Adders")
-var btn = document.querySelector(".btn")
-var gs = document.querySelector(".gs")
-var Email = document.querySelector(".Email")
+const taskInput = document.getElementById("taskInput");
+const addBtn = document.getElementById("addBtn");
+const taskList = document.getElementById("taskList");
 
-        const signup = () => {
-            const emailPattern = /^[a-zA-Z0-9._%+-]+@(gmail\.com|.+\.in)$/;
+// Load tasks from localStorage on page load
+let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+tasks.forEach(task => createTaskElement(task));
 
-            // Check if any field is empty
-            if (!username.value || !number.value || !Email.value || !password.value || !SchoolName.value || !Adders.value || !gs.value) {
-                alert("Please fill all fields");
-                return;
-            }
+// Add task
+addBtn.addEventListener("click", () => {
+    const taskText = taskInput.value.trim();
+    if (!taskText) return alert("Please enter a task!");
 
-            // Validate email
-            if (!emailPattern.test(Email.value)) {
-                alert("Invalid Email");
-                return;
-            }
+    const task = { id: Date.now(), text: taskText };
+    tasks.push(task);
+    saveTasks();
+    createTaskElement(task);
+    taskInput.value = "";
+});
 
-            // Save to localStorage
-            localStorage.setItem("school", SchoolName.value);
-            localStorage.setItem("address", Adders.value);
-            localStorage.setItem("username", username.value);
-            localStorage.setItem("password", password.value);
-            localStorage.setItem("number", number.value);
-            localStorage.setItem("kid", gs.value);
-
-            alert("Successfully signed up!");
-            // Redirect (make sure your path is correct)
-            location.href = "login.html";
-        };
-
-        // Button click
-        btn.addEventListener("click", signup);
-
-function cll(){
-    localStorage.setItem("school",JSON.stringify(SchoolName.value))
-           localStorage.setItem("adders",JSON.stringify(Adders.value))
-           localStorage.setItem("username",JSON.stringify(username.value))
-           localStorage.setItem("password",JSON.stringify(password.value))
-           localStorage.setItem("number",JSON.stringify(number.value))
-           alert("Succesfully signup")
+// Save tasks to localStorage
+function saveTasks() {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
+// Create task HTML element
+function createTaskElement(task) {
+    const li = document.createElement("li");
+    li.className = "task";
 
-const passwordInput = document.getElementById('passwordInput');
-const togglePassword = document.getElementById('togglePassword');
+    li.innerHTML = `
+        <span>${task.text}</span>
+        <div class="buttons">
+            <button class="edit">Edit</button>
+            <button class="delete">Delete</button>
+        </div>
+    `;
 
-togglePassword.addEventListener('click', () => {
-    // Toggle the type attribute
-    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-    passwordInput.setAttribute('type', type);
-    
-    // Toggle the icon (optional)
-    togglePassword.textContent = type === 'password' ? '👁️' : '🙈';
-});
+    // Edit
+    li.querySelector(".edit").addEventListener("click", () => {
+        const newText = prompt("Edit task:", task.text);
+        if (newText) {
+            task.text = newText;
+            li.querySelector("span").textContent = newText;
+            saveTasks();
+        }
+    });
+
+    // Delete
+    li.querySelector(".delete").addEventListener("click", () => {
+        tasks = tasks.filter(t => t.id !== task.id);
+        li.remove();
+        saveTasks();
+    });
+
+    taskList.appendChild(li);
+}

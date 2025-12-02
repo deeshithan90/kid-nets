@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+}
+
+.container {
+    width: 100%;
+    max-width: 430px;
+    background: #ffffff20;
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.input-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input-box input {
+    flex: 1;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.input-box button {
+    padding: 10px 15px;
+    border: none;
+    background: #00e676;
+    color: #000;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#taskList {
+    list-style: none;
+}
+
+.task {
+    background: #ffffff15;
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.task span {
+    font-size: 16px;
+}
+
+.buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.edit, .delete {
+    padding: 6px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+.edit {
+    background: #ffeb3b;
+}
+
+.delete {
+    background: #ff5252;
+}

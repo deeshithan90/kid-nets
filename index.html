@@ -1,64 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./atyle.css">
+    <title>My To-Do List</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<body bgcolor="black" style="color: white; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
-    <br>
-    <br>
-    <br>
-    <br>
-    <center style="margin-top: -70px; margin-left: -30px;">
-        <div style="display: flex; align-items: center; justify-content: space-between;">
-        <img src="./Kid.Net.png" width="170px">
-        <img src="./Jolly emoji.jpg" width="220px">
+    <div class="container">
+        <h1>📝 My To-Do List</h1>
+
+        <div class="input-box">
+            <input type="text" id="taskInput" placeholder="Enter a new task...">
+            <button id="addBtn">Add</button>
         </div>
-    <div>
-        <div class="g">
-        <input type="text" placeholder="Kid Name" class="gs">
-        <select name="" id="" class="gst">
-            <option value="">Male</option>
-            <option value="">Female</option>
-        </select>
-        </div>
-        <br>
-        <br>
-        <input type="number" placeholder="Grade" class="g">
-        <br>
-        <br>
-          <input type="text" placeholder="School Name" class="School-Name">
-        <br>
-        <br>
-        <p>DOB</p>
-        <input type="date" class="datetime">
-        <br>
-        <br>
-        <input type="text" placeholder="Parent Name" class="username">
-        <br>
-        <br>
-        <input type="number" placeholder="Mobile Number" class="number">
-        <br>
-        <br>
-       <input type="password" placeholder="Password" class="password" id="passwordInput">
-    <span id="togglePassword" style="position: absolute; right: 140px; top: 68%; transform: translateY(-50%); cursor: pointer; color: white; font-size: 18px;">
-        👁️
-    </span>
-    <br>
-    <br>
-    <input type="text" class="Adders" placeholder="Address">
-        <br>
-        <br>
-        <input type="email" placeholder="Email" class="Email">
-        <br>
-        <br>
-        <br>
-        <button class="btn" onclick="signup()">Signup</button>
+
+        <ul id="taskList"></ul>
     </div>
-    <script src="./script.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
